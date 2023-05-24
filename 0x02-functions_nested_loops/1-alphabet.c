@@ -1,17 +1,28 @@
-#include "main.h"
+#include <unistd.h>
+#include "_putchar.c"
 
 /**
+ * _putchar - holds
+ * print_alphabet - prints
+ * @char c: Expect
+ * @return: Returns
+ *
  * main - check the code
  *
  * Return: Always 0.
  */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
 void print_alphabet(void)
 {
-	int a = 0;
+	char a = 'a';
 
-	while (a <= z)
+	while (a <= 'z')
 	{
-		write(1, a, 1);
+		_putchar(a);
 		a++;
 	}
 }
