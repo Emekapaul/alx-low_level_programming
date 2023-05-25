@@ -1,34 +1,18 @@
-#include <unistd.h>
-#include "_putchar.c"
+#include "main.h"
 
 /**
- * _putchar - holds
- * print_alphabet - prints
- * @char c: Expect
- * @return: Returns
+ * print_alphabet - check the code
  *
- * main - check the code
- *
- * Return: Always 0.
+ * description - Print small letter from a - z
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 void print_alphabet(void)
 {
-	char a = 'a';
+	char sl = 'a';
 
-	while (a <= 'z')
+	while (sl <= 'z')
 	{
-		_putchar(a);
-		a++;
+		_putchar(sl);
+		sl++;
 	}
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
+	_putchar('\n');
 }
