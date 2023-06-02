@@ -1,0 +1,25 @@
+#include "main.h"
+
+/**
+  * void print_most_numbers(void)
+  */
+void print_most_numbers(void)
+{
+	int num = 0;
+
+	while (num <= 9)
+	{
+		if (num == 2 || num == 4)
+		{
+			_putchar('\0');
+			num++;
+		}		
+
+		else
+		{
+			_putchar(num + '0');
+			num++;
+		}
+	}
+	_putchar('\n');
+}
