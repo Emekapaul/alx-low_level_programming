@@ -5,27 +5,16 @@
   */
 void more_numbers(void)
 {
-	int num1 = 1;
-	int num2;
+	int i, j;
 
-	while (num1 <= 10)
+	for (i = 1; i <= 10; i++)
 	{
-		num2 = 0;
-		while (num2 <= 14)
+		for (j = 0; j <= 14; j++)
 		{
-			if (num2 <= 9)
-			{
-				_putchar(num2 + '0');
-			}
-
-			else
-			{
+			if (j >= 10)
 				_putchar('1');
-				_putchar(num2 % 10 + '0');
-			}
-			num2++;
+			_putchar (j % 10 + '0');
 		}
-		num1++;
 		_putchar('\n');
 	}
 }
