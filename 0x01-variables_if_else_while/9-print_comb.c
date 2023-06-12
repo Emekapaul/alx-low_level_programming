@@ -11,19 +11,15 @@ int main(void)
 
 	while (lc <= 57)
 	{
+		putchar(lc);
+
 		if (lc != 57)
 		{
-			putchar(lc);
 			putchar(',');
 			putchar(' ');
-			lc++;
 		}
-
-		else
-		{
-			putchar(lc);
-			lc++;
-		}
+		lc++;
 	}
+	putchar('\n');
 	return (0);
 }
