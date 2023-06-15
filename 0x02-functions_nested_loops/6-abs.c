@@ -7,15 +7,15 @@
   *@n: The int to print.
   *Return: Absolute value
   */
-int _abs(int n)
+int _abs(int num)
 {
-	if (n < 0)
+	if (num < 0)
 	{
-		return (-n);
+		return (-num);
 	}
 
 	else
 	{
-		return (n);
+		return (num);
 	}
 }
