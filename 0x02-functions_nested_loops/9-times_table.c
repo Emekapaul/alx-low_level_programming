@@ -20,14 +20,12 @@ void times_table(void)
 				_putchar((vt * ht) % 10 + '0');
 				ht++;
 			}
-
 			else if (ht == 9)
 			{
 				_putchar((vt * ht) / 10 + '0');
 				_putchar((vt * ht) % 10 + '0');
 				ht++;
 			}
-
 			else if ((vt * ht) / 10 + '0' != '0')
 			{
 				_putchar((vt * ht) / 10 + '0');
@@ -36,7 +34,6 @@ void times_table(void)
 				_putchar(' ');
 			ht++;
 			}
-
 			else
 			{
 				_putchar(' ');
