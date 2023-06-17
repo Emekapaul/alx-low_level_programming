@@ -1,13 +1,10 @@
 #include "main.h"
-
 /**
-  *times_table - function that prints the 9 times table,
-  *starting with 0.
+  *times_table - function that prints the 9 times table.
   */
 void times_table(void)
 {
-	int vt = 0;
-	int ht;
+	int vt = 0, ht;
 
 	while (vt <= 9)
 	{
@@ -18,30 +15,33 @@ void times_table(void)
 			{
 				_putchar(' ');
 				_putchar((vt * ht) % 10 + '0');
-				ht++;
 			}
 			else if (ht == 9)
 			{
 				_putchar((vt * ht) / 10 + '0');
 				_putchar((vt * ht) % 10 + '0');
-				ht++;
 			}
-			else if ((vt * ht) / 10 + '0' != '0')
+			else if (ht == 0 && (vt * ht) / 10 + '0' == '0')
+			{
+				_putchar((vt * ht) % 10 + '0');
+				_putchar(',');
+				_putchar(' ');
+			}
+			else if ((vt * ht) / 10 + '0' == '0')
+			{
+				_putchar(' ');
+				_putchar((vt * ht) % 10 + '0');
+				_putchar(',');
+				_putchar(' ');
+			}
+			else
 			{
 				_putchar((vt * ht) / 10 + '0');
 				_putchar((vt * ht) % 10 + '0');
 				_putchar(',');
 				_putchar(' ');
+			}
 			ht++;
-			}
-			else
-			{
-				_putchar(' ');
-				_putchar((vt * ht) % 10 + '0');
-				_putchar(',');
-				_putchar(' ');
-				ht++;
-			}
 		}
 	_putchar('\n');
 	vt++;
