@@ -7,21 +7,21 @@
 void more_numbers(void)
 {
 	int cnt = 0;
-	int num, k;
+	char num, k;
 
-	while (cnt <= 10)
+	while (cnt <= 9)
 	{
-		num = 0;
-		while (num <= 9)
+		num = '0';
+		while (num <= '9')
 		{
-			_putchar(num + '0');
+			_putchar(num);
 			num++;
 		}
-		k = 0;
-		while (k <= 4)
+		k = '0';
+		while (k <= '4')
 		{
 			_putchar('1');
-			_putchar(k + '0');
+			_putchar(k);
 			k++;
 		}
 		_putchar('\n');
