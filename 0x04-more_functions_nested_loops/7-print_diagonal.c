@@ -13,7 +13,7 @@ void print_diagonal(int n)
 	{
 		_putchar('\n');
 	}
-	else if (n)
+	else
 	{
 		while (i <= n)
 		{
