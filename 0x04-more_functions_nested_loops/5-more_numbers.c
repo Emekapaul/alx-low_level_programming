@@ -7,22 +7,19 @@
 void more_numbers(void)
 {
 	int cnt = 0;
-	char num, k;
+	int num;
 
 	while (cnt <= 9)
 	{
-		num = '0';
-		while (num <= '9')
+		num = 0;
+		while (num <= 14)
 		{
-			_putchar(num);
-			num++;
-		}
-		k = '0';
-		while (k <= '4')
-		{
-			_putchar('1');
-			_putchar(k);
-			k++;
+			if (num > 9)
+			{
+				_putchar('1');
+				_putchar(num % 10 + '0');
+			}
+		num++;
 		}
 		_putchar('\n');
 		cnt++;
