@@ -31,7 +31,6 @@ void puts_half(char *str)
 
 	while (str[half] != '\0')
 	{
-	
 		if (half == n)
 		{
 			half++;
