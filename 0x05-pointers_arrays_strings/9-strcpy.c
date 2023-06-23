@@ -7,6 +7,8 @@
   *
   *@dest: The character to print
   *@src: The character to print
+  *
+  *Return: char
   */
 char *_strcpy(char *dest, char *src)
 {
@@ -14,17 +16,11 @@ char *_strcpy(char *dest, char *src)
 
 	while (src[len] != '\0')
 	{
-		if (src[len] != '\0')
-		{
-			dest[len] = src[len];
-		}
-
-		else
-		{
-			dest[len] = '\0';
-		}
-	len++;
+		dest[len] = src[len];
+		len++;
 	}
+
+	dest[len] = '\0';
 
 	return (dest);
 }
