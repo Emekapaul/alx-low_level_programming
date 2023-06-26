@@ -5,6 +5,8 @@
   *@dest: The character to print.
   *@src: The character to print.
   *@n: The integer to print.
+  *
+  *Return: char
   */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -14,13 +16,13 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		len1++;
 	}
-	
+
 	while (src[len2] && n > 0)
 	{
-			dest[len1] = src[len2];
-			len2++;
-			len1++;
-			n--;
+		dest[len1] = src[len2];
+		len2++;
+		len1++;
+		n--;
 	}
 
 	dest[len1] = '\0';
