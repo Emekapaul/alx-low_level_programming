@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  *char *_memset(char *s, char b, unsigned int n)
+  *_memset - function that fills memory with a constant byte.
   *@s: pointer
   *@b: The value the print
   *@n: The number of times to print n
@@ -10,7 +10,7 @@
   */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned i = 0;
+	unsigned int i = 0;
 
 	while (i < n)
 	{
