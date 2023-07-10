@@ -17,15 +17,15 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
-			if (*argv[i] > 'a' && *argv[i] < 'z')
+			if (*argv[i] > '0' && *argv[i] < '9')
+			{
+				res += atoi(argv[i]);
+			}
+
+			else
 			{
 				printf("Error\n");
 				return (1);
-			}
-			
-			else
-			{
-				res += atoi(argv[i]);
 			}
 		i++;
 		}
