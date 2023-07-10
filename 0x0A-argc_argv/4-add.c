@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 		while (i < argc)
 		{
 			char *arg = argv[i];
+
 			j = 0;
 			while (arg[j] != '\0')
 			{
