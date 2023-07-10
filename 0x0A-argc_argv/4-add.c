@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
   *main - Entry point
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
-			if (*argv[i] > '0' && *argv[i] < '9')
+			if (isdigit(*argv[i]))
 			{
 				res += atoi(argv[i]);
 			}
