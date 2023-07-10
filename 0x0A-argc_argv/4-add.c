@@ -19,21 +19,18 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
+			char *arg = argv[i];
 			j = 0;
-			while (argv[i][j] != '\0')
+			while (arg[j] != '\0')
 			{
-				if (isdigit(argv[i][j]))
-				{
-					res += atoi(argv[i]);
-				}
-
-				else
+				if (!isdigit(arg[j]))
 				{
 					printf("Error\n");
 					return (1);
 				}
 			j++;
 			}
+		res += atoi(arg);
 		i++;
 		}
 
