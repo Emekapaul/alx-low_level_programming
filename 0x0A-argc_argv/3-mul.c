@@ -4,7 +4,7 @@
 /**
   *main - Entry point
   *@argc: Argument count
-  *@argc: Strings argument.
+  *@argv: Strings argument.
   *
   *Return: Always 0 (Success)
   */
@@ -27,7 +27,9 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
+
+		return (1);
 	}
 
-	return (1);
+	return (0);
 }
