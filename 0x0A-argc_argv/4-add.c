@@ -13,20 +13,26 @@ int main(int argc, char *argv[])
 {
 	int i = 1;
 	int res = 0;
+	int j;
 
 	if (argc > 1)
 	{
 		while (i < argc)
 		{
-			if (isdigit(*argv[i]))
+			j = 0;
+			while (argv[i][j] != '\0')
 			{
-				res += atoi(argv[i]);
-			}
+				if (isdigit(argv[i][j]))
+				{
+					res += atoi(argv[i]);
+				}
 
-			else
-			{
-				printf("Error\n");
-				return (1);
+				else
+				{
+					printf("Error\n");
+					return (1);
+				}
+			j++;
 			}
 		i++;
 		}
