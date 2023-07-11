@@ -15,26 +15,23 @@ char *create_array(unsigned int size, char c)
 	char *p;
 	unsigned int i;
 
+	if (size == 0)
+	{
+		return (0);
+	}
+
 	p = (char *) malloc(size * sizeof(char));
 
 	if (p == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 
 	else
 	{
 		for (i = 0; i < size; i++)
 		{
-			if (size == 0)
-			{
-				return (NULL);
-			}
-
-			else
-			{
-				*(p + i) = c;
-			}
+			*(p + i) = c;
 		}
 	}
 
