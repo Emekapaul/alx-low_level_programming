@@ -15,11 +15,11 @@ char *create_array(unsigned int size, char c)
 	char *p;
 	unsigned int i;
 
-	p = (char*) malloc(size * sizeof(char));
+	p = (char *) malloc(size * sizeof(char));
 
 	if (p == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 
 	else
@@ -28,7 +28,7 @@ char *create_array(unsigned int size, char c)
 		{
 			if (size == 0)
 			{
-				return (0);
+				return (NULL);
 			}
 
 			else
