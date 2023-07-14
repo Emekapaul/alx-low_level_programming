@@ -94,5 +94,6 @@ char **strtow(char *str);
 /* 0x0C. C - More malloc, free */
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
+void *_calloc(unsigned int nmemb, unsigned int size);
 
 #endif
