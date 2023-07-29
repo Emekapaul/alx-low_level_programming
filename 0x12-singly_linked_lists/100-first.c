@@ -1,10 +1,12 @@
 #include <stdio.h>
-#include "lists.h"
+
+void first(void) __attribute__ ((constructor));
 
 /**
- * print_list - prints all the elements of a linked list
- * @h: pointer to the list_t list to print
- *
- * Return: the number of nodes printed
+ * first - Outputs sentence before main function is executed
  */
-
+void first(void)
+{
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
+}
