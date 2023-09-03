@@ -21,8 +21,6 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			ans += atoi(argv[i]);
-
 			j = 0;
 
 			while (argv[i][j] != '0')
@@ -35,7 +33,7 @@ int main(int argc, char *argv[])
 				}
 			j++;
 			}
-
+			 ans += atoi(argv[i]);
 		}
 
 		printf("%d\n", ans);
