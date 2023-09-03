@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
   *main - Write a program that adds positive numbers.
@@ -22,7 +23,7 @@ int main(int argc, char *argv[])
 		{
 			ans += atoi(argv[i]);
 
-			if (argv[i][0] <= 'z' && argv[i][0] >= 'a')
+			if (!isdigit(argv[i][0]))
 			{
 				printf("Error\n");
 
