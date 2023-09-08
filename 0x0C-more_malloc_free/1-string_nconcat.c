@@ -15,6 +15,7 @@ int _strlen(char *s)
 	{
 		i++;
 	}
+
 	return (i);
 }
 
@@ -67,5 +68,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			ptr[i] = s2[m];
 		}
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
