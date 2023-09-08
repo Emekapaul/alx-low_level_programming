@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * _strlen - returns the length of a string
  * @s: string to evaluate
@@ -15,10 +14,8 @@ int _strlen(char *s)
 	{
 		i++;
 	}
-
 	return (i);
 }
-
 /**
   **string_nconcat - Write a function that concatenates two strings.
   *@s1: First string.
@@ -60,7 +57,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			ptr[i] = s2[j];
 		}
 	}
-
 	else
 	{
 		for (m = 0; m < n; m++, i++)
