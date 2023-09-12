@@ -1,4 +1,6 @@
 #ifndef OBJECT_MACRO_H
-#define SIZE 1020
+#define OBJECT_MACRO_H
+
+#define SIZE 1024
 
 #endif /* OBJECT_MACRO_H */
