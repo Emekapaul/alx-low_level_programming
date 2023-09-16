@@ -29,10 +29,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (i == (n - 1))
 		{
 			printf("\n");
-			return;
 		}
 
-		printf("%s", separator);
+		else
+		{
+			printf("%s", separator);
+		}
 	}
 
 	va_end(args);
