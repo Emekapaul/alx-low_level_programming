@@ -23,12 +23,18 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
+
 		res = va_arg(args, int);
 		printf("%d", res);
+
+		if (separator == NULL)
+		{
+		}
 
 		if (i == (n - 1))
 		{
 			printf("\n");
+			return;
 		}
 
 		else
