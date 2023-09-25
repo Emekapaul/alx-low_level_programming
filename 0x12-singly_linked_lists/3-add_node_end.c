@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * add_node_end - Write a function that adds a new node at the beginning
  * oflist_t list.
@@ -14,19 +13,16 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *ptr = NULL, *new = NULL;
 
 	new = malloc(sizeof(list_t));
-
 	if (new == NULL)
 	{
 		return (NULL);
 	}
-
 	if (str == NULL)
 	{
 		new->str = strdup("(nil)");
 		new->len = 0;
 		new->next = NULL;
 	}
-
 	else
 	{
 		for (len = 0; str[len] != '\0'; len++)
@@ -36,13 +32,12 @@ list_t *add_node_end(list_t **head, const char *str)
 		new->len = len;
 		new->next = NULL;
 	}
-
 	if (*head == NULL)
 	{
 		*head = new;
 	}
 	else
-	{	
+	{
 		ptr = *head;
 		for (; ptr->next != NULL;)
 		{
