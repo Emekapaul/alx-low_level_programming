@@ -13,7 +13,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int len = strlen(text_content);
+	int len;
 	ssize_t _write;
 
 	if (filename == NULL)
@@ -30,6 +30,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
+		len = strlen(text_content);
 		_write = write(fd, text_content, len);
 		if (_write == -1)
 		{
@@ -38,5 +39,6 @@ int create_file(const char *filename, char *text_content)
 		}
 	}
 
+	close(fd);
 	return (1);
 }
