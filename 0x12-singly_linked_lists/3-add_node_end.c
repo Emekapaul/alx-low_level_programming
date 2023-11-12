@@ -1,49 +1,51 @@
 #include "lists.h"
+
 /**
- * add_node_end - Write a function that adds a new node at the beginning
- * oflist_t list.
- * @head: Pointer to frist struct node
- * @str: The string to add.
- *
- * Return: the address of the new element, or NULL if it failed.
- */
+  * add_node_end - Write a function that adds a new node at the end of a
+  * list_t list.
+  * @head: Head to first node
+  * @str: The string to add at end of list
+  *
+  * Return: Return: the address of the new element, or NULL if it failed
+  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	unsigned int len;
-	list_t *ptr = NULL, *new = NULL;
+	list_t *ptr = NULL;
+	list_t *new_node = NULL;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	if (!head || !str)
 	{
 		return (NULL);
 	}
-	if (str == NULL)
+
+	new_node = malloc(sizeof(list_t));
+	if (!new_node)
 	{
-		new->str = strdup("(nil)");
-		new->len = 0;
-		new->next = NULL;
+		return (NULL);
 	}
-	else
+
+	new_node->str = strdup(str);
+	if (!new_node->str)
 	{
-		for (len = 0; str[len] != '\0'; len++)
-		{
-		}
-		new->str = strdup(str);
-		new->len = len;
-		new->next = NULL;
+		free(new_node);
+		new_node = NULL;
+		return (NULL);
 	}
-	if (*head == NULL)
+	new_node->len = strlen(str);
+	new_node->next = NULL;
+
+	if (!*head)
 	{
-		*head = new;
+		*head = new_node;
 	}
 	else
 	{
 		ptr = *head;
-		for (; ptr->next != NULL;)
+		while (ptr->next)
 		{
 			ptr = ptr->next;
 		}
-		ptr->next = new;
+		ptr->next = new_node;
 	}
-	return (new);
+	return (*head);
 }
